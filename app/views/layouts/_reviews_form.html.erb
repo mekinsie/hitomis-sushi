@@ -1,0 +1,10 @@
+  <%= render "layouts/errors", :object => @review %>
+
+<%= form_for [@product, @review] do |f| %>
+  <%= f.label :author %>
+  <%= f.label :content_body %>
+  <%= f.label :rating %>
+  <%= f.submit :Submit %>
+<% end %>
+
+<%= link_to "Back", product_path(@product) %>
