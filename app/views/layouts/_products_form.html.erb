@@ -1,0 +1,10 @@
+  <%= render "layouts/errors", :object => @product %>
+
+<%= form_for @product do |f| %>
+  <%= f.label :name %>
+  <%= f.label :cost %>
+  <%= f.label :country_of_origin %>
+  <%= f.submit :Submit %>
+<% end %>
+
+<%= link_to "Back", products_path %>
