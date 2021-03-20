@@ -75,7 +75,11 @@ $ rake db:migrate
 ```
 The databse should now be correctly set up. And you may start a local server to interact with the project. 
 
-9. To start a local server, open your default browser and type "localhost:3000" into the search bar and press enter. Here, you will see the live server.
+9. To start a local server, type the following into your terminal:
+```
+$ rails s
+```
+10. Open your default browser and type "localhost:3000" into the search bar and press enter. Here, you will see the live server.
 
 ## Running Tests
 * This application was created using test-driven development (TDD).
