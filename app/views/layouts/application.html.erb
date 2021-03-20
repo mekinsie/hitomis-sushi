@@ -9,6 +9,11 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+  <div id="nav">
+      <%= link_to "Home", root_path %>
+      <%= link_to "Products", products_path %>
+    </div>
+
   <body>
   <%= flash[:notice] %>
     <%= yield %>
