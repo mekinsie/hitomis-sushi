@@ -73,6 +73,11 @@ $ rake db:create
 ```
 $ rake db:migrate
 ```
+
+8. Seed the databse using Faker by typing the following into your terminal:
+```
+$ rake db:seed
+```
 The databse should now be correctly set up. And you may start a local server to interact with the project. 
 
 9. To start a local server, type the following into your terminal:
