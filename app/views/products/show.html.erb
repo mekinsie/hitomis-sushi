@@ -1,23 +1,20 @@
-<h1> <%= @product.name %></h1>
-
-<h3>Price: $<%= @product.cost %></h3>
-<h3>Country of origin: <%= @product.country_of_origin %></h3>
-
-<%= link_to "Edit Product", edit_product_path(@product) %>
-<%= link_to "Delete Product", product_path(@product),
-:data => {:confirm => "Are you sure?", :method => "delete"} %>
-
-
-<%= link_to "Add a review", new_product_review_path(@product) %>
-
+<div class="container">
+  <h1> <%= @product.name %></h1>
+  <h3>Price: $<%= @product.cost %></h3>
+  <h3>Country of origin: <%= @product.country_of_origin %></h3>
+  <%= link_to "Edit Product", edit_product_path(@product) %>
+  <%= link_to "Delete Product", product_path(@product),
+  :data => {:confirm => "Are you sure?", :method => "delete"} %>
+  <%= link_to "Add a review", new_product_review_path(@product) %>
   <% if @product.reviews.any? %>
     <h3>Product reviews:</h3>
       <% @product.reviews.each do |review| %>
         <h4>Rating: <%= review.rating %></h4>
         <p>Author: <%= review.author %></p>
         <p><%= review.content_body %></p>
-        <%= link_to "See details", product_review_path(@product, review) %><br>
+        <%= link_to "See details", product_review_path(@product, review) %><br><br>
       <% end %>
   <% else %>
     <p>There are no reviews for this product yet.</p>
   <% end %>
+</div>

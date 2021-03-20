@@ -1,9 +1,13 @@
-<p>Rating: <%= @review.rating %></p>
-<p>Author: <%= @review.author %></p>
-<p><%= @review.content_body %></p>
+<div class="container">
+  <p>Rating: <%= @review.rating %></p>
+  <p>Author: <%= @review.author %></p>
+  <p><%= @review.content_body %></p>
 
-<%= link_to "Edit Review", edit_product_review_path(@product, @review) %>
+  <%= link_to "Edit Review", edit_product_review_path(@product, @review) %><br>
+  <%= link_to "Delete Review", product_review_path(@product, @review),
+  :data => {:confirm => "Are you sure?", :method => "delete"} %>
 
-
-<%= link_to "Delete Review", product_review_path(@product, @review),
-:data => {:confirm => "Are you sure?", :method => "delete"} %>
+  <div class="back">
+    <%= link_to "Back", product_path(@product) %>
+  </div>
+</div>

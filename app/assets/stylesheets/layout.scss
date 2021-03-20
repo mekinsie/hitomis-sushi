@@ -1,8 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
 body {
-  background-color: rgb(248, 199, 108);
-  color:red;
+  background-color: rgb(255, 255, 255);
+  color:rgb(22, 80, 8);
+  font-family: 'Quicksand', sans-serif;
 }
 
 #nav {
-background-color: rgb(214, 91, 19);
+background-color: rgb(2, 107, 2);;
+  & a {
+  color: white;
+    &:hover {
+      color: rgb(149, 218, 140);
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+  color: rgb(5, 78, 5);
+  font-weight: bold;
+  &:hover {
+    text-decoration: none;
+    color: rgb(80, 160, 60);
+  }
 }

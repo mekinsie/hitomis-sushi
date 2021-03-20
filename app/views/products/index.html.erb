@@ -1,11 +1,12 @@
-<h1>Products</h1>
-
-      <%= link_to "Create new product", new_product_path %>
-
-<% if @products.any? %>
-  <% @products.each do |product| %>
-      <%= link_to product.name, product_path(product) %>
+<div class="container">
+  <h1>Products</h1>
+  <%= link_to "Create new product", new_product_path %><br>
+  <% if @products.any? %>
+    <% @products.sort %>
+    <% @products.each do |product| %>
+      <%= link_to product.name, product_path(product) %><br>
+    <% end %>
+  <% else %>
+    <p>There are no products yet. </p>
   <% end %>
-<% else %>
-  <p>There are no products yet. </p>
-<% end %>
+</div>
