@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-describe "the add product process" do
-  it "adds a new product" do
+describe "the add review process" do
+  it "adds a review to a product" do
     Product.create({name: "Cheese Puffs", cost: 5.99, country_of_origin: "USA"})
     visit '/'
     click_link 'Products'

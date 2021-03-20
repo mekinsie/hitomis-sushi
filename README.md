@@ -4,7 +4,7 @@
 
 ## Description
 
-This app allows users to add, update and delete new products. In addition, users may add reviews for these products. This application utilizes a one-to-many relationship between products and their reviews.
+This app allows users to add, update and delete new products. In addition, users may add reviews for these products. This app also utilizes a one-to-many relationship between products and their reviews.
 
 ## Technologies used
 
@@ -21,7 +21,7 @@ This app allows users to add, update and delete new products. In addition, users
 * * *
 ## User Stories
 
-* As a user, I want to be able to add, update and delete new procuts.
+* As a user, I want to be able to add, update and delete new products.
 * As a user, I want to be able to click an individual pproduct to see its detail page.
 * As a user, I want to be able to add a review to a product.
 
