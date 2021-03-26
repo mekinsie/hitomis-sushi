@@ -21,10 +21,11 @@ This app allows users to add, update and delete new products. In addition, users
 * * *
 ## User Stories
 
-* As a user, I want to be able to add, update and delete new products.
-* As a user, I want to be able to click an individual pproduct to see its detail page.
-* As a user, I want to be able to add a review to a product.
-
+* As a user, I want to be able to add, update and delete product reviews.
+* As ad admin or user, I want to be able to click an individual product to see its detail page.
+* As an admin or user, I should be able to log in and log out of the application.
+* As an admin, I should be able to add, update and delete products.
+* As an admin, I should be able to delete reviews.
 * * *
 ## Schema
 
