@@ -7,7 +7,7 @@
   <% if current_user && current_user.admin %>
     <%= link_to "Delete Review", product_review_path(@product, @review),
     :data => {:confirm => "Are you sure?", :method => "delete"} %>
-  <% else current_user %>
+  <% elsif current_user &&  @review.email == current_user.email %>
     <%= link_to "Edit Review", edit_product_review_path(@product, @review) %><br>
     <%= link_to "Delete Review", product_review_path(@product, @review),
     :data => {:confirm => "Are you sure?", :method => "delete"} %>
