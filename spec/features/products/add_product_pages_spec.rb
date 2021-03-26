@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-
 describe "the add product process" do
   before :each do
+    User.create({email: "admin@gmail.com", password: "adminpassword", admin: true})
     visit '/'
     click_link 'Sign in'
     fill_in 'user_email', :with => "admin@gmail.com"
@@ -10,8 +10,6 @@ describe "the add product process" do
     click_on 'Log in'
   end
   it "adds a new product" do
-    User.create({email: "admin@gmail.com", password: "adminpassword", admin: true})
-    visit '/'
     click_link 'Products'
     click_link 'Create new product'
     fill_in "product_name", :with => 'cheese puffs'
@@ -20,9 +18,7 @@ describe "the add product process" do
     click_on 'Submit'
     expect(page).to have_content "Cheese Puffs"
   end
-
   it "gives an error when no name, cost, or country is entered" do\
-    User.create({email: "admin@gmail.com", password: "adminpassword", admin: true})
     visit '/products/new'
     fill_in "product_name", :with => ''
     fill_in "product_cost", :with => ''
