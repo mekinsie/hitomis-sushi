@@ -3,13 +3,14 @@
   <h3>Price: $<%= @product.cost %></h3>
   <h3>Country of origin: <%= @product.country_of_origin %></h3>
 
-
   <% if current_user && current_user.admin %>
     <%= link_to "Edit Product", edit_product_path(@product) %>
     <%= link_to "Delete Product", product_path(@product),
     :data => {:confirm => "Are you sure?", :method => "delete"} %>
-  <% else current_user %>
+  <% elsif current_user %>
     <%= link_to "Add a review", new_product_review_path(@product) %>
+  <% else %>
+  <p>Sign in to add a review for this product.</p>
   <% end %>
 
   <% if @product.reviews.any? %>

@@ -1,6 +1,10 @@
 <div class="container">
   <h1>Products</h1>
-  <%= link_to "Create new product", new_product_path %><br>
+
+  <% if current_user && current_user.admin %>
+    <%= link_to "Create new product", new_product_path %><br>
+  <% end %>
+
   <% if @products.any? %>
     <% @products.sort %>
     <% @products.each do |product| %>
