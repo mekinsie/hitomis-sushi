@@ -1,5 +1,12 @@
 class ProductsController < ApplicationController
 
+  before_action :except => [:index, :show] do
+    unless current_user && current_user.admin
+      flash[:notice] = "You are not authorized to visit that page"
+      redirect_to products_path
+    end
+  end
+
   def index
     @products = Product.all.sort_by { |hash| hash[:name] }
     render :index

@@ -1,5 +1,12 @@
 class ReviewsController < ApplicationController
 
+  before_action :except => [:show] do
+    unless current_user && current_user.admin
+      flash[:notice] = "You are not authorized to visit that page"
+      redirect_to products_path
+    end
+  end
+
   def show
     @product = Product.find(params[:product_id])
     @review = Review.find(params[:id])
