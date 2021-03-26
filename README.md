@@ -22,7 +22,7 @@ This app allows users to add, update and delete new products. In addition, users
 ## User Stories
 * As an admin or user, I want to be able to create an account.
 * As an admin or user, I should be able to log in and log out of the application.
-* As a user, I want to be able to add, update and delete product reviews.
+* As a user, I want to be able to add, update and delete my own product reviews.
 * As ad admin or user, I want to be able to click an individual product to see its detail page.
 * As an admin, I should be able to add, update and delete products.
 * Ass an admin, I want to ensure that other users don't have access to CRUD functionality for a product.
