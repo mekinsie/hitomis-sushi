@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
 
   def index
-    @products = Product.all
+    @products = Product.all.sort_by { |hash| hash[:name] }
     render :index
   end
 
