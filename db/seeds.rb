@@ -2,6 +2,7 @@ require 'faker'
 
 Product.destroy_all
 Review.destroy_all
+User.destroy_all
 
 50.times do
   product = Product.create!(name: Faker::Food.dish, cost: Faker::Number.decimal(l_digits: 2), country_of_origin: Faker::Address.country)
@@ -11,4 +12,7 @@ Review.destroy_all
   end
 end
 
+User.create!(email: "admin@gmail.com", password: "adminpassword", admin: true)
+
 p "Created #{Product.count} products and #{Review.count} reviews."
+p "Created #{User.count} admin."

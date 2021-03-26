@@ -3,9 +3,15 @@
   <p>Author: <%= @review.author %></p>
   <p><%= @review.content_body %></p>
 
-  <%= link_to "Edit Review", edit_product_review_path(@product, @review) %><br>
-  <%= link_to "Delete Review", product_review_path(@product, @review),
-  :data => {:confirm => "Are you sure?", :method => "delete"} %>
+
+  <% if current_user && current_user.admin %>
+    <%= link_to "Delete Review", product_review_path(@product, @review),
+    :data => {:confirm => "Are you sure?", :method => "delete"} %>
+  <% else current_user %>
+    <%= link_to "Edit Review", edit_product_review_path(@product, @review) %><br>
+    <%= link_to "Delete Review", product_review_path(@product, @review),
+    :data => {:confirm => "Are you sure?", :method => "delete"} %>
+  <% end %>
 
   <div class="back">
     <%= link_to "Back", product_path(@product) %>

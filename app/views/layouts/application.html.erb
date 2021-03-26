@@ -10,7 +10,9 @@
   </head>
 
   <div id="nav">
-      <% if current_user %>
+      <% if current_user && current_user.admin %>
+        <%= link_to "Home", root_path %> | <%= link_to "Products", products_path %> | <%= link_to "Settings", '/users/edit' %> | <%= link_to "Sign Out", destroy_user_session_path, :method => :delete %> | Role: Admin | <%= current_user.email %>
+      <% elsif current_user %>
         <%= link_to "Home", root_path %> | <%= link_to "Products", products_path %> | <%= link_to "Settings", '/users/edit' %> | <%= link_to "Sign Out", destroy_user_session_path, :method => :delete %> | <%= current_user.email %>
       <% else %>
           <%= link_to "Home", '/' %> | <%= link_to "Sign up", new_user_registration_path %> | <%= link_to "Sign in", new_user_session_path %>
