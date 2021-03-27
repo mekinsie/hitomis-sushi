@@ -1,4 +1,5 @@
-# Mario's Products and Reviews
+<img src="./app/assets/images/hitomi.png" height="200px">
+
 #### **Author: Mekinsie Callahan**
 * * *
 
