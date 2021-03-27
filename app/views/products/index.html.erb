@@ -1,9 +1,11 @@
 <div class="container">
   <div class="center-text">
     <h1>Products</h1>
-    <% if current_user && current_user.admin %>
-      <%= link_to "Create new product", new_product_path %><br>
-    <% end %>
+    <div class="red-link">
+      <% if current_user && current_user.admin %>
+        <%= link_to "Create new product", new_product_path %><br>
+      <% end %>
+    </div>
     <% if @products.any? %>
       <% @products.sort %>
       <% @products.each do |product| %>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MarioRatings</title>
+    <title>Hitomi's Sushi</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -23,8 +23,10 @@
 
   <body>
   <div class="container">
-    <%= flash[:notice] %>
-    <%= flash[:alert] %>
+    <div id="flash">
+      <%= flash[:notice] %>
+      <%= flash[:alert] %>
+    </div>
     <%= yield %>
   </div>
   </body>
