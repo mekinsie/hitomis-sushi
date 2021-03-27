@@ -9,12 +9,20 @@ body {
 #nav {
 background-color: rgb(2, 107, 2);
 color: white;
+text-align: center;
+height: 50px;
+font-size: large;
   & a {
   color: white;
     &:hover {
       color: rgb(149, 218, 140);
     }
   }
+}
+
+#nav-text {
+  position: relative;
+  top: 10px;
 }
 
 a {
@@ -25,4 +33,12 @@ a {
     text-decoration: none;
     color: rgb(80, 160, 60);
   }
+}
+
+.center-text {
+  text-align: center;
+}
+
+.container {
+  margin-bottom: 30px;
 }

@@ -1,16 +1,16 @@
 <div class="container">
-  <h1>Products</h1>
-
-  <% if current_user && current_user.admin %>
-    <%= link_to "Create new product", new_product_path %><br>
-  <% end %>
-
-  <% if @products.any? %>
-    <% @products.sort %>
-    <% @products.each do |product| %>
-      <%= link_to product.name, product_path(product) %><br>
+  <div class="center-text">
+    <h1>Products</h1>
+    <% if current_user && current_user.admin %>
+      <%= link_to "Create new product", new_product_path %><br>
     <% end %>
-  <% else %>
-    <p>There are no products yet. </p>
-  <% end %>
+    <% if @products.any? %>
+      <% @products.sort %>
+      <% @products.each do |product| %>
+        <%= link_to product.name, product_path(product) %><br>
+      <% end %>
+    <% else %>
+      <p>There are no products yet. </p>
+    <% end %>
+  </div>
 </div>
