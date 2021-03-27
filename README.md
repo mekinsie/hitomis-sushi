@@ -5,7 +5,7 @@
 
 ## Description
 
-This app allows admin to add, update and delete new products. In addition, users may add, edit and delete reviews for these products. This app also utilizes a one-to-many relationship between products and their reviews.  
+The purpose of this app is to practice using a SQL database along with user authentication and authorization. Users can sign up and login to add, edit, and delete their own reviews. Admin may add, edit and delete products while also deleting reviews. This app utilizes a one-to-many relationship between products and their reviews.  
 
 Interact with the app <a href="https://serene-atoll-05233.herokuapp.com/">here</a>
 
@@ -20,6 +20,9 @@ Interact with the app <a href="https://serene-atoll-05233.herokuapp.com/">here</
 * RSpec
 * Bundler
 * PostgreSQL
+* Heroku
+* Faker
+* SimpleCov
 
 * * *
 ## User Stories
