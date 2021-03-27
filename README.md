@@ -5,7 +5,9 @@
 
 ## Description
 
-This app allows admin to add, update and delete new products. In addition, users may add, edit and delete reviews for these products. This app also utilizes a one-to-many relationship between products and their reviews.
+This app allows admin to add, update and delete new products. In addition, users may add, edit and delete reviews for these products. This app also utilizes a one-to-many relationship between products and their reviews.  
+
+Interact with the app <a href="https://serene-atoll-05233.herokuapp.com/">here</a>
 
 ## Technologies used
 
