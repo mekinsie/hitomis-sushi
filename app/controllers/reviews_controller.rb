@@ -1,15 +1,22 @@
 class ReviewsController < ApplicationController
 
   before_action :only => [:destroy] do
-    unless current_user || current_user.admin
+    unless current_user && current_user.email == Review.find(params[:id]).email || current_user.admin
       flash[:notice] = "You are not authorized to visit that page"
       redirect_to products_path
     end
   end
 
-  before_action :only => [:new, :create, :edit, :update] do
+  before_action :only => [:new, :create] do
     unless current_user && current_user.admin == false
-      flash[:notice] = "Only users can create and update reviews."
+      flash[:notice] = "Only users can create and update reviews"
+      redirect_to products_path
+    end
+  end
+
+  before_action :only => [:edit, :update] do
+    unless current_user && current_user.admin == false && current_user.email == Review.find(params[:id]).email
+      flash[:notice] = "You cannot edit other reviews"
       redirect_to products_path
     end
   end
@@ -31,7 +38,7 @@ class ReviewsController < ApplicationController
     @product = Product.find(params[:product_id])
     @review = @product.reviews.new(review_params)
     if @review.save
-      flash[:notice] = "review successfully created"
+      flash[:notice] = "Review successfully created"
       redirect_to product_path(@product)
     else
       render :new
@@ -48,7 +55,7 @@ class ReviewsController < ApplicationController
     @product = Product.find(params[:product_id])
     @review = Review.find(params[:id])
     if @review.update(review_params)
-      flash[:notice] = "review successfully updated"
+      flash[:notice] = "Review successfully updated"
       redirect_to product_review_path
     else
       render :edit
@@ -59,7 +66,7 @@ class ReviewsController < ApplicationController
     @product = Product.find(params[:product_id])
     @review = Review.find(params[:id])
     @review.destroy
-    flash[:notice] = "review successfully deleted"
+    flash[:notice] = "Review successfully deleted"
     redirect_to product_path(@product)
   end
 
