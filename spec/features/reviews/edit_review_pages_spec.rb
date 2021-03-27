@@ -31,7 +31,7 @@ describe "the edit review process" do
     fill_in 'user_password', :with => "adminpassword"
     click_on 'Log in'
     visit "/products/#{product.id}/reviews/#{product.reviews[0].id}/edit"
-    expect(page).to have_content "Only users can create and update reviews."
+    expect(page).to have_content "You cannot edit other reviews"
   end
 
 end
