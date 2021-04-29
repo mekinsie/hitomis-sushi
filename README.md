@@ -53,7 +53,7 @@ Interact with the app <a href="https://serene-atoll-05233.herokuapp.com/">here</
 
 2. Once you have chosen your desired directory, clone the github repo using the version control tool `git` (<a href="https://www.learnhowtoprogram.com/introduction-to-programming/getting-started-with-intro-to-programming/git-and-github">download instructions</a>). Typing the following command into your terminal:
 ```bash
-$ git clone https://github.com/mekinsie/gathered_analysis
+$ git clone https://github.com/mekinsie/hitomis-sushi
 ```
 3. Open the project in VSCode by typing the following in your terminal:
 
